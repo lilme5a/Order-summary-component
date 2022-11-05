@@ -1,0 +1,132 @@
+/* Start Variables */
+:root {
+    /* Colors */
+    /* Primary */
+    --Pale-blue: rgb(224, 232, 255);
+    --Bright-blue: rgb(56, 41, 224);
+    /* Neutral */
+    --Very-pale-blue: rgb(245, 247, 255);
+    --Desaturated-blue: rgb(114, 128, 167);
+    --Dark-blue: rgb(31, 47, 86);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--Pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+    height: 100vh;
+}
+/* End Global Rules */
+/* Start Body */
+.box {
+    background-color: #fff;
+    width: 230px;
+    height: 355px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4%;
+    padding: 0 15px;
+}
+.box > img {
+    width: 230px;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+}
+.box p.head {
+    margin-top: 15px;
+    font-weight: 900;
+    color: var(--Dark-blue);
+    font-size: 17px;
+}
+.box p.des {
+    font-size: 12px;
+    color: var(--Desaturated-blue);
+    text-align: center;
+    margin-top: 10px;
+}
+.box .plan {
+    display: flex;
+    width: 100%;
+    background-color: var(--Very-pale-blue);
+    margin-top: 15px;
+    padding: 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10%;
+}
+.box .plan img {
+    width: 35px;
+}
+.box .plan p {
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--Dark-blue);
+    position: relative;
+    margin: -15px 0 0 -15px;
+}
+.box .plan p::after {
+    content: '$59.99/year';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--Desaturated-blue);
+}
+.box .plan a {
+    color: var(--Bright-blue);
+    font-weight: 700;
+    font-size: 12px;
+}
+.box > a.to {
+    text-decoration: none;
+    color: rgb(255 255 255);
+    background-color: var(--Bright-blue);
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    border-radius: 5%;
+    margin-top: 10px;
+    font-size: 12px;
+    box-shadow: 0px 3px 20px 0px #707070;
+}
+.box > a.cancel {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    font-size: 13px;
+    margin-top: 15px;
+    font-weight: 700;
+}
+.box .plan a:hover {
+    color: var(--Dark-blue);
+}
+.box > a.to:hover {
+    background-color: var(--Dark-blue);
+}
+.box > a.cancel:hover {
+    color: var(--Dark-blue);
+}
+
+
+.attribution {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+}
+/* End Body */
